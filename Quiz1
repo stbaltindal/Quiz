@@ -1,0 +1,76 @@
+import random
+
+a = "a"
+b = "b"
+c = "c"
+ç = "ç"
+d = "d"
+e = "e"
+f = "f"
+g = "g"
+ğ = "ğ"
+h = "h"
+ı = "ı"
+i = "i"
+j = "j"
+k = "k"
+l = "l"
+m = "m"
+n = "n"
+o = "o"
+ö = "ö"
+p = "p"
+r = "r"
+s = "s"
+ş = "ş"
+t = "t"
+u = "u"
+ü = "ü"
+v = "v"
+y = "y"
+z = "z"
+alfabe_sözlük = {a: "a", b: "b", c: "c", ç: "ç", d: "d", e: "e", f: "f", g: "g", ğ: "ğ", h: "h", ı: "ı", i: "i", j: "j",
+                 k: "k", l: "l", m: "m", n: "n", o: "o", ö: "ö", p: "p", r: "r", s: "s", ş: "ş", t: "t", u: "u", ü: "ü",
+                 v: "v", y: "y", z: "z"}
+alfabe_liste = [a, b, c, ç, d, e, f, g, ğ, h, ı, i, j, k, l, m, n, o, ö, p, r, s, ş, t, u, ü, v, y, z]
+
+
+def alfabe_kodla():
+    for i in alfabe_sözlük:
+        alfabe_sözlük[i] = random.choices(alfabe_liste)
+        alfabe_liste.remove(alfabe_sözlük[i][0])
+
+
+def sifrele(x):
+    a = ""
+    for i in x:
+        for tt in alfabe_sözlük.items():
+            if tt[0] == i:
+                a += tt[1][0]
+    print("Şifrelenmiş hali:",a)
+
+
+def çözümle(x):
+    a = ""
+    for i in x:
+        for tt in alfabe_sözlük.items():
+            if tt[1][0] == i:
+                a += tt[0]
+    print("Çözümlenmiş hali:",a)
+
+
+alfabe_kodla()
+
+while True:
+    print("""
+    **********   Metni kodlamak için 1'i            *********
+    **********   Çözümlemek için 2'yi               *********
+    **********   Çıkmak için q'yu tuşlayınız        *********    """)
+    dd = input("Kelimeyi giriniz:")
+    vv = input("İşlemi tuşlayınız:")
+    if vv == "1":
+        sifrele(dd)
+    if vv == "2":
+        çözümle(dd)
+    if vv == "q":
+        break
