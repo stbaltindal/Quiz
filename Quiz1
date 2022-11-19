@@ -1,5 +1,5 @@
 import random
-#şu aşağıdaki kısmı tek tek yazmak benim kodda gereksiz oldu fakat kodlamayı düşünürken kullanılabilecek gereçleri bir daha yazarak vakit kaybetmemek için önceden bu şekilde yazmıştım.
+#şu aşağıdaki kısmı tek tek yazmak benim kodda gereksiz oldu fakat kodlamayı düşünürken kullanılabilecek gereçleri bir daha yazarak vakit kaybetmemek için öncesinde bu şekilde yazmıştım.
 a = "a"
 b = "b"
 c = "c"
