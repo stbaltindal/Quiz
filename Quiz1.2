@@ -1,0 +1,38 @@
+import random
+alfabe =["a","b","c","ç","d","e","f","g","ğ","h","ı","i","j","k","l","m","n","o","ö","p","r","s","ş","t","u","ü","v","y","z"]
+alfabe2 = ["a","b","c","ç","d","e","f","g","ğ","h","ı","i","j","k","l","m","n","o","ö","p","r","s","ş","t","u","ü","v","y","z"]
+şifreli_alfabe = []
+for i in range(len(alfabe)):
+    x = random.choices(alfabe)[0]
+    şifreli_alfabe.append(x)
+    alfabe.remove(x)
+def şifrele(kelime):
+    sifreli_kelime=""
+    for i in kelime:
+        d = alfabe2.index(i)
+        e = şifreli_alfabe[d]
+        sifreli_kelime += e
+    return sifreli_kelime
+def çözümle(kelime):
+    çözümlü_kelime = ""
+    for i in kelime:
+        d = şifreli_alfabe.index(i)
+        e = alfabe2[d]
+        çözümlü_kelime += e
+    return çözümlü_kelime
+while True:
+    print("""
+    *******************
+    1'i kelimeyi şifrelemek için
+    2'yi kelimeyi çözümlemek için
+    q'yu koddan çıkmak için tuşlayınız
+    *********************""")
+    islem = input("Yapmak istediğiniz işlem:")
+    girilen_kelime = input("Kelimeyi yazınız:")
+    if islem == "q":
+        print("Koddan çıkılıyor...")
+        break
+    elif islem == "1":
+        print("Şifrelenmiş hali:",şifrele(girilen_kelime))
+    elif islem == "2":
+        print("Çözümlenmiş hali:",çözümle(girilen_kelime))
