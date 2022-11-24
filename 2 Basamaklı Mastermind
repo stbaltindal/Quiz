@@ -40,6 +40,3 @@ while a ==0:
                 print(-1)
         if (giris[0] in random_tutulan )== False and (giris[1] in random_tutulan)== False :
             print(0)
-        if tebrik == 2:
-            print("Tebrikler bildiniz.")
-            a += 1
