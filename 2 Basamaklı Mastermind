@@ -1,0 +1,45 @@
+import random
+a = 0
+b = list(range(10,100))
+istenmeyen = list(range(11,100,11))
+istenmeyen2 = list(range(10,100,10))
+for i in istenmeyen+istenmeyen2:
+    b.remove(i)
+random_tutulan = str(random.choices(b)[0])
+print(random_tutulan)
+while a ==0:
+    d= 0
+    while d == 0:
+        giris = input("2 basamaklı bir sayı tahmin ediniz:")
+        if len(giris) !=2:
+            print("2 basamakli sayi giriniz.")
+        if len(giris) == 2:
+            if giris[0] == giris[1]:
+                print("Lütfen rakamları farklı sayı giriniz...")
+            else:
+                d += 1
+    if giris == random_tutulan :
+        print(2)
+        print("Tebrikler")
+        a += 1
+    elif giris[::-1] == random_tutulan:
+        print(-2)
+        
+    else:
+        if giris[0] in random_tutulan:
+            if giris[0] == random_tutulan[0]:
+                print(1)
+              
+            else:
+                print(-1)
+        if giris[1] in random_tutulan:
+            if giris[1] == random_tutulan[1]:
+                print(1)
+         
+            else:
+                print(-1)
+        if (giris[0] in random_tutulan )== False and (giris[1] in random_tutulan)== False :
+            print(0)
+        if tebrik == 2:
+            print("Tebrikler bildiniz.")
+            a += 1
