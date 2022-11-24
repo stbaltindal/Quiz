@@ -1,0 +1,37 @@
+import random
+tahmin_listem = list()
+for i in range(1000,10000):
+    if not "0" in str(i) and str(i)[0] != str(i)[1] and str(i)[0] != str(i)[2] and str(i)[0] != str(i)[3] and str(i)[1] != str(i)[2]and str(i)[1] != str(i)[3]and str(i)[2] != str(i)[3]:
+        tahmin_listem.append(i)
+random_sayi = str(random.choices(tahmin_listem)[0])
+a = 0
+print(random_sayi)
+while a == 0:
+    b = 0
+    while b==0 :
+        kullanıcı = input("Bir sayı tahmin ediniz:")
+        if len(kullanıcı) != 4:
+            print("Lütfen doğru bir sayı giriniz...")
+        else:
+            b +=1
+    yerleri_ayni = 0
+    yerleri_farkli = 0
+    for i in kullanıcı:
+        if i in random_sayi and random_sayi.index(i) != kullanıcı.index(i):
+            yerleri_farkli -=1
+        if i in random_sayi and random_sayi.index(i) == kullanıcı.index(i):
+            yerleri_ayni +=1
+
+    if yerleri_ayni == 0 and yerleri_farkli ==0:
+        print(0)
+    if yerleri_ayni != 0:
+        if yerleri_ayni == 4:
+            laylaylom = 0
+        else:
+            print(yerleri_ayni)
+    if yerleri_farkli != 0:
+        print(yerleri_farkli)
+    if yerleri_ayni == 4:
+        print("Tebrikler bildiniz.")
+        yerleri_ayni = 0
+        a += 1
