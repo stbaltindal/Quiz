@@ -1,0 +1,27 @@
+import random
+
+zar = [1,2,3,4,5,6]
+def zar_at():
+    a = random.choice(zar)
+    b = random.choice(zar)
+    print("İlk zar:",a)
+    print("İkinci zar:",b)
+    print("Toplam:",a+b)
+    return a+b
+def oyun():
+    ilk_zar = zar_at()
+    if(ilk_zar == 7) or (ilk_zar ==11):
+        print("Tebrikler Kazandınız.")
+    elif (ilk_zar == 2) or (ilk_zar ==3) or (ilk_zar == 12):
+        print("Kaybettiniz.")
+    else:
+        k = 0
+        while k==0:
+            rastgele = zar_at()
+            if rastgele == 7:
+                print("Kaybettiniz.")
+                k+=1
+            elif rastgele == ilk_zar:
+                print("Tebrikler kazandınız.")
+                k += 1
+oyun()
