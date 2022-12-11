@@ -7,23 +7,23 @@ def zar_at_ve_toplamlarını_döndür():
     print("İlk zar:",zarlardan_biri)
     print("İkinci zar:",zarlardan_digeri)
     print("Toplam:",zarlardan_biri+zarlardan_digeri)
-    return zarlardan_biri+zarlardan_digeri                                               # zarların toplamını returnlüyoruz aksi halde fonksiyon zarları atar ama kaydetmez.
+    return zarlardan_biri+zarlardan_digeri                                                    # zarların toplamını returnlüyoruz aksi halde fonksiyon zarları atar ama kaydetmez.
 def oyun():
-    ilk_zarlar_toplamı = zar_at_ve_toplamlarını_döndür()                            # ilk zarı atıyoruz ve o anki zarların toplamını bir değişkene atıyoruz.
-    if(ilk_zarlar_toplamı == 7) or (ilk_zarlar_toplamı ==11):                      # atılan ilk zarların toplamı 7 veya 11 ise oyuncu kazanır.
+    ilk_zarlar_toplamı = zar_at_ve_toplamlarını_döndür()                                      # ilk zarı atıyoruz ve o anki zarların toplamını bir değişkene atıyoruz.
+    if(ilk_zarlar_toplamı == 7) or (ilk_zarlar_toplamı ==11):                                 # atılan ilk zarların toplamı 7 veya 11 ise oyuncu kazanır.
         print("Tebrikler Kazandınız.")
     elif (ilk_zarlar_toplamı == 2) or (ilk_zarlar_toplamı ==3) or (ilk_zarlar_toplamı == 12): # 2,3,12 ise oyuncu kaybeder.
         print("Kaybettiniz.")
-    else:                                                    # atılan iki zarın toplamı bu değerlerin dışındaysa 
+    else:                                                                                     # atılan iki zarın toplamı bu değerlerin dışındaysa 
         k = 0
         while k==0:
             rastgele = zar_at_ve_toplamlarını_döndür()
-            if rastgele == ilk_zarlar_toplamı:                          # oyuncu ilk attığı zarları tekrardan atarsa kazanır.
+            if rastgele == ilk_zarlar_toplamı:                                                # oyuncu ilk attığı zarları tekrardan atarsa kazanır.
                 print("Tebrikler kazandınız.")
-                k += 1                                       # oyuncu kazandı bu yüzden k'yı arttırmalıyız aksi halde oyun devam eder.
-            elif rastgele == 7:                              # eğer ilk attığı sonucu bulmadan önce 7 atarsa kaybeder.    
+                k += 1                                                                        # oyuncu kazandı bu yüzden k'yı arttırmalıyız aksi halde oyun devam eder.
+            elif rastgele == 7:                                                               # eğer ilk attığı sonucu bulmadan önce 7 atarsa kaybeder.    
                 print("Kaybettiniz.")
-                k+=1                                         # oyuncu kaybetti bu yüzden k'yı arttırmalıyız aksi halde oyun devam eder.
-                                                             # kod if ve elife girmezse while döngüsünde olduğu için ve k hala 0 olduğu için tekrardan while
-                                                             # döngüsüne başlar.
-oyun()                                                       # fonksiyonu buraya kadar yazdık ve burda çağırıyoruz çağırmadığımız taktirde fonksiyon çalışmaz.
+                k+=1                                                                          # oyuncu kaybetti bu yüzden k'yı arttırmalıyız aksi halde oyun devam eder.
+                                                                                              # kod if ve elife girmezse while döngüsünde olduğu için ve k hala 0 olduğu için tekrardan while
+                                                                                              # döngüsüne başlar.
+oyun()                                                                                        # fonksiyonu buraya kadar yazdık ve burda çağırıyoruz çağırmadığımız taktirde fonksiyon çalışmaz.
