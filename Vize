@@ -21,10 +21,10 @@ def oyun():
             rastgele = zar_at_ve_toplamlarını_döndür()
             if rastgele == ilk_zarlar_toplamı:                                                # oyuncu ilk attığı zarları tekrardan atarsa kazanır.
                 print("Tebrikler kazandınız.")
-                k += 1                                                                        # oyuncu kazandı bu yüzden k'yı arttırmalıyız aksi halde oyun devam eder.
+                k += 1                                                                        # oyuncu kazandı bu yüzden k'yı arttırmalıyız aksi halde oyun(while döngüsü) devam eder.
             elif rastgele == 7:                                                               # eğer ilk attığı sonucu bulmadan önce 7 atarsa kaybeder.
                 print("Kaybettiniz.")
-                k+=1                                                                          # oyuncu kaybetti bu yüzden k'yı arttırmalıyız aksi halde oyun devam eder.
+                k+=1                                                                          # oyuncu kaybetti bu yüzden k'yı arttırmalıyız aksi halde oyun(while döngüsü) devam eder.
                                                                                               # kod if ve elife girmezse while döngüsünde olduğu için ve k hala 0 olduğu için tekrardan while
                                                                                               # döngüsüne başlar.
 oyun()                                                                                        # fonksiyonu buraya kadar yazdık ve burda çağırıyoruz çağırmadığımız taktirde fonksiyon çalışmaz.
