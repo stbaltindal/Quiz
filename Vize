@@ -25,5 +25,5 @@ def oyun():
                 print("Kaybettiniz.")
                 k+=1                                         # oyuncu kaybetti bu yüzden k'yı arttırmalıyız aksi halde oyun devam eder.
                                                              # kod if ve elife girmezse while döngüsünde olduğu için ve k hala 0 olduğu için tekrardan while
-                                                             döngüsüne başlar.
+                                                             # döngüsüne başlar.
 oyun()                                                       # fonksiyonu buraya kadar yazdık ve burda çağırıyoruz çağırmadığımız taktirde fonksiyon çalışmaz.
