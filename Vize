@@ -1,27 +1,29 @@
 import random
 
 zar = [1,2,3,4,5,6]
-def zar_at():
-    a = random.choice(zar)
-    b = random.choice(zar)
+def zar_at_ve_toplamlarını_döndür(): 
+    zarlardan_biri = random.choice(zar)                    
+    zarlardan_digeri = random.choice(zar)
     print("İlk zar:",a)
     print("İkinci zar:",b)
     print("Toplam:",a+b)
-    return a+b
+    return a+b                                               # zarların toplamını returnlüyoruz aksi halde fonksiyon zarları atar ama kaydetmez.
 def oyun():
-    ilk_zar = zar_at()
-    if(ilk_zar == 7) or (ilk_zar ==11):
+    ilk_zarlar_toplamı = zar_at()                            # ilk zarı atıyoruz ve o anki zarların toplamını bir değişkene atıyoruz.
+    if(ilk_zar == 7) or (ilk_zar ==11):                      # atılan ilk zarların toplamı 7 veya 11 ise oyuncu kazanır.
         print("Tebrikler Kazandınız.")
-    elif (ilk_zar == 2) or (ilk_zar ==3) or (ilk_zar == 12):
+    elif (ilk_zar == 2) or (ilk_zar ==3) or (ilk_zar == 12): # 2,3,12 ise oyuncu kaybeder.
         print("Kaybettiniz.")
-    else:
+    else:                                                    # atılan iki zarın toplamı bu değerlerin dışındaysa 
         k = 0
         while k==0:
             rastgele = zar_at()
-            if rastgele == 7:
-                print("Kaybettiniz.")
-                k+=1
-            elif rastgele == ilk_zar:
+            if rastgele == ilk_zar:                          # oyuncu ilk attığı zarları tekrardan atarsa kazanır.
                 print("Tebrikler kazandınız.")
-                k += 1
-oyun()
+                k += 1                                       # oyuncu kazandı bu yüzden k'yı arttırmalıyız aksi halde oyun devam eder.
+            elif rastgele == 7:                              # eğer ilk attığı sonucu bulmadan önce 7 atarsa kaybeder.    
+                print("Kaybettiniz.")
+                k+=1                                         # oyuncu kaybetti bu yüzden k'yı arttırmalıyız aksi halde oyun devam eder.
+                                                             # kod if ve elife girmezse while döngüsünde olduğu için ve k hala 0 olduğu için tekrardan while
+                                                             döngüsüne başlar.
+oyun()                                                       # fonksiyonu buraya kadar yazdık ve burda çağırıyoruz çağırmadığımız taktirde fonksiyon çalışmaz.
